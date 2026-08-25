@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Properties | A ONE HOUSING</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7f7;
+            color: #111;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: #fff;
+            padding: 18px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar-brand {
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #111;
+        }
+
+        .navbar-brand:hover {
+            color: #111;
+        }
+
+        .nav-link {
+            color: #333 !important;
+            font-size: 14px;
+            margin-left: 18px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #000 !important;
+            font-weight: 600;
+        }
+
+        .nav-contact {
+            background: #111;
+            color: white !important;
+            padding: 11px 18px !important;
+            border-radius: 5px;
+        }
+
+        .nav-contact:hover {
+            background: #333;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.58),
+                    rgba(0,0,0,0.58)
+                ),
+                url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+
+            min-height: 500px;
+
+            display: flex;
+            align-items: center;
+
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-label {
+            font-size: 12px;
+            letter-spacing: 4px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            font-weight: 600;
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #ddd;
+            max-width: 650px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           SEARCH AREA
+        ========================= */
+
+        .search-wrapper {
+            margin-top: -45px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .search-box {
+            background: white;
+            padding: 15px;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 15px 45px rgba(0,0,0,0.12);
+
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr auto;
+
+            gap: 10px;
+        }
+
+        .search-field {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 0 15px;
+
+            border: 1px solid #ddd;
+            border-radius: 6px;
+
+            min-height: 50px;
+        }
+
+        .search-field i {
+            color: #777;
+        }
+
+        .search-field input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .search-select {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 0 15px;
+            outline: none;
+            background: white;
+            min-height: 50px;
+        }
+
+        .search-button {
+            background: #111;
+            color: white;
+            border: none;
+
+            padding: 0 25px;
+
+            border-radius: 6px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .search-button:hover {
+            background: #333;
+        }
+
+
+        /* =========================
+           PROPERTIES SECTION
+        ========================= */
+
+        .properties {
+            padding: 100px 0;
+        }
+
+        .section-heading {
+            margin-bottom: 45px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .section-heading h2 {
+            font-size: 42px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: #777;
+            max-width: 600px;
+        }
+
+
+        /* =========================
+           FILTER BUTTONS
+        ========================= */
+
+        .filters {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            border: 1px solid #ddd;
+            background: white;
+
+            padding: 10px 20px;
+
+            border-radius: 30px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            font-size: 14px;
+        }
+
+        .filter-btn:hover {
+            background: #111;
+            color: white;
+            border-color: #111;
+        }
+
+        .filter-btn.active {
+            background: #111;
+            color: white;
+            border-color: #111;
+        }
+
+
+        /* =========================
+           PROPERTY CARD
+        ========================= */
+
+        .property-card {
+            background: white;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 7px 25px rgba(0,0,0,0.07);
+
+            transition:
+                transform 0.35s ease,
+                box-shadow 0.35s ease;
+
+            height: 100%;
+        }
+
+        .property-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 18px 45px rgba(0,0,0,0.13);
+        }
+
+
+        /* IMAGE */
+
+        .property-image {
+            height: 270px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .property-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform 0.6s ease;
+        }
+
+        .property-card:hover .property-image img {
+            transform: scale(1.08);
+        }
+
+
+        /* STATUS */
+
+        .status {
+            position: absolute;
+
+            top: 18px;
+            left: 18px;
+
+            background: #111;
+            color: white;
+
+            padding: 7px 12px;
+
+            border-radius: 4px;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* FAVORITE */
+
+        .favorite {
+            position: absolute;
+
+            top: 15px;
+            right: 15px;
+
+            width: 42px;
+            height: 42px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+            transition: 0.3s;
+        }
+
+        .favorite:hover {
+            background: #111;
+            color: white;
+        }
+
+        .favorite.active {
+            background: #111;
+            color: white;
+        }
+
+
+        /* CARD CONTENT */
+
+        .property-content {
+            padding: 25px;
+        }
+
+        .property-content h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .location {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .location i {
+            color: #111;
+            margin-right: 4px;
+        }
+
+        .price {
+            font-size: 21px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+
+        /* PROPERTY FEATURES */
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+
+            padding: 15px 0;
+
+            margin-bottom: 20px;
+        }
+
+        .features span {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .features i {
+            color: #111;
+            margin-right: 4px;
+        }
+
+
+        /* DETAILS BUTTON */
+
+        .details-btn {
+            width: 100%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: #111;
+            color: white;
+
+            padding: 13px 16px;
+
+            border-radius: 5px;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .details-btn:hover {
+            background: #333;
+            color: white;
+        }
+
+
+        /* =========================
+           NO RESULTS
+        ========================= */
+
+        .no-results {
+            text-align: center;
+
+            padding: 80px 20px;
+
+            display: none;
+        }
+
+        .no-results i {
+            font-size: 55px;
+            color: #aaa;
+        }
+
+        .no-results h3 {
+            margin-top: 20px;
+        }
+
+        .no-results p {
+            color: #777;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta-section {
+            padding-bottom: 100px;
+        }
+
+        .cta {
+            background: #111;
+
+            color: white;
+
+            border-radius: 12px;
+
+            padding: 55px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .cta-label {
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            font-weight: 700;
+
+            margin-bottom: 12px;
+        }
+
+        .cta h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            color: #aaa;
+            margin: 0;
+        }
+
+        .cta-button {
+            background: white;
+
+            color: #111;
+
+            padding: 14px 25px;
+
+            border-radius: 5px;
+
+            white-space: nowrap;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #ddd;
+            color: #111;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #111;
+
+            color: white;
+
+            padding: 50px 0;
+
+            text-align: center;
+        }
+
+        footer h4 {
+            font-size: 16px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #888;
+
+            font-size: 13px;
+
+            margin: 0;
+        }
+
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        .property-item {
+            animation: fadeUp 0.6s ease both;
+        }
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 992px) {
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .search-box {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .search-button {
+                min-height: 50px;
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .navbar-brand {
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 450px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .search-wrapper {
+                margin-top: -25px;
+            }
+
+            .search-box {
+                grid-template-columns: 1fr;
+            }
+
+            .properties {
+                padding: 70px 0;
+            }
+
+            .section-heading h2 {
+                font-size: 34px;
+            }
+
+            .property-image {
+                height: 250px;
+            }
+
+            .cta {
+                padding: 35px 25px;
+
+                display: block;
+            }
+
+            .cta-button {
+                display: inline-block;
+
+                margin-top: 25px;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .property-content {
+                padding: 20px;
+            }
+
+            .property-content h3 {
+                font-size: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVBAR
+========================================== -->
+
+<nav class="navbar navbar-expand-lg sticky-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            A ONE HOUSING
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarMenu"
+        >
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link active"
+                        href="properties.html"
+                    >
+                        Properties
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="index.html#about"
+                    >
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="index.html#contact"
+                    >
+                        Contact
+                    </a>
+                </li>
+
+                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+
+                    <a
+                        class="nav-link nav-contact"
+                        href="index.html#contact"
+                    >
+                        Contact Us
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ==========================================
+     HERO
+========================================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                A ONE HOUSING & REAL ESTATE
+            </div>
+
+            <h1>
+                Find a place<br>
+                you'll love to live.
+            </h1>
+
+            <p>
+                Explore our collection of carefully selected
+                houses, apartments and land across Nepal.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     SEARCH
+========================================== -->
+
+<section class="search-wrapper">
+
+    <div class="container">
+
+        <div class="search-box">
+
+
+            <div class="search-field">
+
+                <i class="bi bi-search"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search property or location..."
+                >
+
+            </div>
+
+
+            <select
+                class="search-select"
+                id="typeFilter"
+            >
+
+                <option value="all">
+                    All Types
+                </option>
+
+                <option value="house">
+                    House
+                </option>
+
+                <option value="apartment">
+                    Apartment
+                </option>
+
+                <option value="land">
+                    Land
+                </option>
+
+            </select>
+
+
+            <select
+                class="search-select"
+                id="statusFilter"
+            >
+
+                <option value="all">
+                    All Status
+                </option>
+
+                <option value="sale">
+                    For Sale
+                </option>
+
+                <option value="rent">
+                    For Rent
+                </option>
+
+            </select>
+
+
+            <button
+                class="search-button"
+                id="searchButton"
+            >
+                Search
+            </button>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     PROPERTIES
+========================================== -->
+
+<section class="properties">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                OUR LISTINGS
+            </div>
+
+            <h2>
+                Featured Properties
+            </h2>
+
+            <p>
+                Discover homes and land selected to match
+                different lifestyles and investment needs.
+            </p>
+
+        </div>
+
+
+        <!-- FILTERS -->
+
+        <div class="filters">
+
+            <button
+                class="filter-btn active"
+                data-filter="all"
+            >
+                All
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="house"
+            >
+                Houses
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="apartment"
+            >
+                Apartments
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="land"
+            >
+                Land
+            </button>
+
+        </div>
+
+
+
+        <!-- PROPERTY GRID -->
+
+        <div
+            class="row g-4"
+            id="propertyGrid"
+        >
+
+
+            <!-- ================= HOUSE ================= -->
+
+            <div
+                class="col-lg-4 col-md-6 property-item"
+                data-type="house"
+                data-status="sale"
+                data-search="modern family house bhaktapur nepal"
+            >
+
+                <div class="property-card">
+
+
+                    <div class="property-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
+                            alt="Modern Family House"
+                        >
+
+
+                        <span class="status">
+                            FOR SALE
+                        </span>
+
+
+                        <button
+                            class="favorite"
+                            aria-label="Favorite property"
+                        >
+
+                            <i class="bi bi-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="property-content">
+
+                        <h3>
+                            Modern Family House
+                        </h3>
+
+
+                        <div class="location">
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            Bhaktapur, Nepal
+
+                        </div>
+
+
+                        <div class="price">
+                            Rs. 1,25,00,000
+                        </div>
+
+
+                        <div class="features">
+
+                            <span>
+                                <i class="bi bi-door-open"></i>
+                                4 Beds
+                            </span>
+
+                            <span>
+                                <i class="bi bi-droplet"></i>
+                                3 Baths
+                            </span>
+
+                            <span>
+                                <i class="bi bi-rulers"></i>
+                                2,500 sq.ft
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="property-details.html?property=house"
+                            class="details-btn"
+                        >
+
+                            View Details
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= APARTMENT ================= -->
+
+            <div
+                class="col-lg-4 col-md-6 property-item"
+                data-type="apartment"
+                data-status="rent"
+                data-search="luxury apartment kathmandu nepal"
+            >
+
+                <div class="property-card">
+
+
+                    <div class="property-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1000&q=85"
+                            alt="Luxury Apartment"
+                        >
+
+
+                        <span class="status">
+                            FOR RENT
+                        </span>
+
+
+                        <button
+                            class="favorite"
+                            aria-label="Favorite property"
+                        >
+
+                            <i class="bi bi-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="property-content">
+
+                        <h3>
+                            Luxury Apartment
+                        </h3>
+
+
+                        <div class="location">
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            Kathmandu, Nepal
+
+                        </div>
+
+
+                        <div class="price">
+                            Rs. 45,000 / month
+                        </div>
+
+
+                        <div class="features">
+
+                            <span>
+                                <i class="bi bi-door-open"></i>
+                                2 Beds
+                            </span>
+
+                            <span>
+                                <i class="bi bi-droplet"></i>
+                                2 Baths
+                            </span>
+
+                            <span>
+                                <i class="bi bi-rulers"></i>
+                                1,400 sq.ft
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="property-details.html?property=apartment"
+                            class="details-btn"
+                        >
+
+                            View Details
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= LAND ================= -->
+
+            <div
+                class="col-lg-4 col-md-6 property-item"
+                data-type="land"
+                data-status="sale"
+                data-search="residential land lalitpur nepal"
+            >
+
+                <div class="property-card">
+
+
+                    <div class="property-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=85"
+                            alt="Residential Land"
+                        >
+
+
+                        <span class="status">
+                            LAND
+                        </span>
+
+
+                        <button
+                            class="favorite"
+                            aria-label="Favorite property"
+                        >
+
+                            <i class="bi bi-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="property-content">
+
+                        <h3>
+                            Residential Land
+                        </h3>
+
+
+                        <div class="location">
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            Lalitpur, Nepal
+
+                        </div>
+
+
+                        <div class="price">
+                            Rs. 85,00,000
+                        </div>
+
+
+                        <div class="features">
+
+                            <span>
+                                <i class="bi bi-bounding-box"></i>
+                                4 Aana
+                            </span>
+
+                            <span>
+                                <i class="bi bi-signpost-2"></i>
+                                Road Access
+                            </span>
+
+                            <span>
+                                <i class="bi bi-lightning"></i>
+                                Electricity
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="property-details.html?property=land"
+                            class="details-btn"
+                        >
+
+                            View Details
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= VILLA ================= -->
+
+            <div
+                class="col-lg-4 col-md-6 property-item"
+                data-type="house"
+                data-status="sale"
+                data-search="contemporary villa lalitpur nepal"
+            >
+
+                <div class="property-card">
+
+                    <div class="property-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+                            alt="Contemporary Villa"
+                        >
+
+                        <span class="status">
+                            FOR SALE
+                        </span>
+
+                        <button class="favorite">
+
+                            <i class="bi bi-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="property-content">
+
+                        <h3>
+                            Contemporary Villa
+                        </h3>
+
+                        <div class="location">
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            Lalitpur, Nepal
+
+                        </div>
+
+                        <div class="price">
+                            Rs. 2,10,00,000
+                        </div>
+
+                        <div class="features">
+
+                            <span>
+                                <i class="bi bi-door-open"></i>
+                                5 Beds
+                            </span>
+
+                            <span>
+                                <i class="bi bi-droplet"></i>
+                                4 Baths
+                            </span>
+
+                            <span>
+                                <i class="bi bi-rulers"></i>
+                                3,200 sq.ft
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="property-details.html?property=villa"
+                            class="details-btn"
+                        >
+
+                            View Details
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= CITY APARTMENT ================= -->
+
+            <div
+                class="col-lg-4 col-md-6 property-item"
+                data-type="apartment"
+                data-status="rent"
+                data-search="city view apartment kathmandu nepal"
+            >
+
+                <div class="property-card">
+
+                    <div class="property-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1000&q=85"
+                            alt="City View Apartment"
+                        >
+
+                        <span class="status">
+                            FOR RENT
+                        </span>
+
+                        <button class="favorite">
+
+                            <i class="bi bi-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="property-content">
+
+                        <h3>
+                            City View Apartment
+                        </h3>
+
+                        <div class="location">
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            Kathmandu, Nepal
+
+                        </div>
+
+                        <div class="price">
+                            Rs. 55,000 / month
+                        </div>
+
+                        <div class="features">
+
+                            <span>
+                                <i class="bi bi-door-open"></i>
+                                3 Beds
+                            </span>
+
+                            <span>
+                                <i class="bi bi-droplet"></i>
+                                2 Baths
+                            </span>
+
+                            <span>
+                                <i class="bi bi-rulers"></i>
+                                1,800 sq.ft
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="property-details.html?property=city-apartment"
+                            class="details-btn"
+                        >
+
+                            View Details
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= PLOT ================= -->
+
+            <div
+                class="col-lg-4 col-md-6 property-item"
+                data-type="land"
+                data-status="sale"
+                data-search="prime residential plot bhaktapur nepal"
+            >
+
+                <div class="property-card">
+
+                    <div class="property-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?auto=format&fit=crop&w=1000&q=85"
+                            alt="Prime Residential Plot"
+                        >
+
+                        <span class="status">
+                            LAND
+                        </span>
+
+                        <button class="favorite">
+
+                            <i class="bi bi-heart"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="property-content">
+
+                        <h3>
+                            Prime Residential Plot
+                        </h3>
+
+                        <div class="location">
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            Bhaktapur, Nepal
+
+                        </div>
+
+                        <div class="price">
+                            Rs. 70,00,000
+                        </div>
+
+                        <div class="features">
+
+                            <span>
+                                <i class="bi bi-bounding-box"></i>
+                                3.5 Aana
+                            </span>
+
+                            <span>
+                                <i class="bi bi-signpost-2"></i>
+                                20 ft Road
+                            </span>
+
+                            <span>
+                                <i class="bi bi-lightning"></i>
+                                Electricity
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="property-details.html?property=plot"
+                            class="details-btn"
+                        >
+
+                            View Details
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- NO RESULTS -->
+
+        <div
+            class="no-results"
+            id="noResults"
+        >
+
+            <i class="bi bi-house-x"></i>
+
+            <h3>
+                No properties found
+            </h3>
+
+            <p>
+                Try another property name, location or filter.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     CTA
+========================================== -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta">
+
+            <div>
+
+                <div class="cta-label">
+                    NEED HELP?
+                </div>
+
+                <h2>
+                    Can't find your ideal property?
+                </h2>
+
+                <p>
+                    Talk to our team and we'll help you find
+                    the right property.
+                </p>
+
+            </div>
+
+
+            <a
+                href="index.html#contact"
+                class="cta-button"
+            >
+
+                Contact Us
+
+                <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <h4>
+            A ONE HOUSING & REAL ESTATE
+        </h4>
+
+        <p>
+            © 2026 A One Housing & Real Estate.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+
+    /* ==========================================
+       PROPERTY FILTER
+    ========================================== */
+
+    const searchInput =
+        document.getElementById("searchInput");
+
+    const typeFilter =
+        document.getElementById("typeFilter");
+
+    const statusFilter =
+        document.getElementById("statusFilter");
+
+    const searchButton =
+        document.getElementById("searchButton");
+
+    const propertyItems =
+        document.querySelectorAll(".property-item");
+
+    const noResults =
+        document.getElementById("noResults");
+
+    const filterButtons =
+        document.querySelectorAll(".filter-btn");
+
+
+    function filterProperties() {
+
+        const searchValue =
+            searchInput.value
+                .toLowerCase()
+                .trim();
+
+        const selectedType =
+            typeFilter.value;
+
+        const selectedStatus =
+            statusFilter.value;
+
+
+        let visibleProperties = 0;
+
+
+        propertyItems.forEach(function(property) {
+
+            const type =
+                property.dataset.type;
+
+            const status =
+                property.dataset.status;
+
+            const searchData =
+                property.dataset.search
+                    .toLowerCase();
+
+
+            const matchesSearch =
+                searchData.includes(searchValue);
+
+            const matchesType =
+                selectedType === "all" ||
+                type === selectedType;
+
+            const matchesStatus =
+                selectedStatus === "all" ||
+                status === selectedStatus;
+
+
+            if (
+                matchesSearch &&
+                matchesType &&
+                matchesStatus
+            ) {
+
+                property.style.display = "";
+
+                visibleProperties++;
+
+            } else {
+
+                property.style.display = "none";
+
+            }
+
+        });
+
+
+        if (visibleProperties === 0) {
+
+            noResults.style.display = "block";
+
+        } else {
+
+            noResults.style.display = "none";
+
+        }
+
+    }
+
+
+    /* ==========================================
+       SEARCH BUTTON
+    ========================================== */
+
+    searchButton.addEventListener(
+        "click",
+        function() {
+
+            filterProperties();
+
+        }
+    );
+
+
+    /* ==========================================
+       LIVE SEARCH
+    ========================================== */
+
+    searchInput.addEventListener(
+        "input",
+        function() {
+
+            filterProperties();
+
+        }
+    );
+
+
+    /* ==========================================
+       TYPE FILTER
+    ========================================== */
+
+    typeFilter.addEventListener(
+        "change",
+        function() {
+
+            filterProperties();
+
+
+            filterButtons.forEach(function(button) {
+
+                button.classList.remove("active");
+
+                if (
+                    button.dataset.filter ===
+                    typeFilter.value
+                ) {
+
+                    button.classList.add("active");
+
+                }
+
+            });
+
+        }
+    );
+
+
+    /* ==========================================
+       STATUS FILTER
+    ========================================== */
+
+    statusFilter.addEventListener(
+        "change",
+        function() {
+
+            filterProperties();
+
+        }
+    );
+
+
+    /* ==========================================
+       CATEGORY BUTTONS
+    ========================================== */
+
+    filterButtons.forEach(function(button) {
+
+        button.addEventListener(
+            "click",
+            function() {
+
+                filterButtons.forEach(
+                    function(btn) {
+
+                        btn.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                button.classList.add("active");
+
+
+                const filter =
+                    button.dataset.filter;
+
+
+                typeFilter.value =
+                    filter;
+
+
+                filterProperties();
+
+            }
+        );
+
+    });
+
+
+    /* ==========================================
+       FAVORITE BUTTON
+    ========================================== */
+
+    const favoriteButtons =
+        document.querySelectorAll(".favorite");
+
+
+    favoriteButtons.forEach(function(button) {
+
+        button.addEventListener(
+            "click",
+            function(event) {
+
+                event.preventDefault();
+
+                button.classList.toggle(
+                    "active"
+                );
+
+
+                const icon =
+                    button.querySelector("i");
+
+
+                if (
+                    button.classList.contains("active")
+                ) {
+
+                    icon.classList.remove(
+                        "bi-heart"
+                    );
+
+                    icon.classList.add(
+                        "bi-heart-fill"
+                    );
+
+                } else {
+
+                    icon.classList.remove(
+                        "bi-heart-fill"
+                    );
+
+                    icon.classList.add(
+                        "bi-heart"
+                    );
+
+                }
+
+            }
+        );
+
+    });
+
+
+</script>
+
+
+</body>
+</html>
