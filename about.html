@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | A ONE HOUSING & REAL ESTATE</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+            background: #fff;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background: #fff;
+            padding: 18px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .navbar-brand {
+            color: #111;
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .navbar-brand:hover {
+            color: #111;
+        }
+
+        .nav-link {
+            color: #333 !important;
+            font-size: 14px;
+            margin-left: 18px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #000 !important;
+            font-weight: 600;
+        }
+
+        .nav-contact {
+            background: #111;
+            color: #fff !important;
+            padding: 11px 18px !important;
+            border-radius: 5px;
+        }
+
+        .nav-contact:hover {
+            background: #333;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .about-hero {
+
+            min-height: 500px;
+
+            display: flex;
+            align-items: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.62),
+                    rgba(0,0,0,0.62)
+                ),
+                url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .about-hero h1 {
+            font-size: 65px;
+            line-height: 1.05;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .about-hero p {
+            max-width: 650px;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #ddd;
+        }
+
+
+        /* =========================
+           INTRODUCTION
+        ========================= */
+
+        .intro {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .intro h2 {
+            font-size: 44px;
+            line-height: 1.15;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .intro-text {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .intro-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats-section {
+            background: #111;
+            color: white;
+            padding: 70px 0;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat h3 {
+            font-size: 45px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .stat p {
+            color: #aaa;
+            margin: 0;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           MISSION
+        ========================= */
+
+        .mission {
+            padding: 100px 0;
+            background: #f6f6f6;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 45px;
+            height: 100%;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .mission-icon {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #111;
+            color: white;
+
+            border-radius: 8px;
+
+            font-size: 25px;
+
+            margin-bottom: 25px;
+        }
+
+        .mission-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .mission-card p {
+            color: #666;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+
+        /* =========================
+           WHY CHOOSE US
+        ========================= */
+
+        .why-us {
+            padding: 100px 0;
+        }
+
+        .why-us h2 {
+            font-size: 42px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .why-description {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .benefit {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+
+        .benefit-icon {
+            min-width: 45px;
+            height: 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #111;
+            color: white;
+
+            border-radius: 50%;
+        }
+
+        .benefit h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .benefit p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .why-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            padding: 100px 0;
+            background: #f6f6f6;
+        }
+
+        .services-heading {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 55px;
+        }
+
+        .services-heading h2 {
+            font-size: 42px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .services-heading p {
+            color: #777;
+            line-height: 1.7;
+        }
+
+        .service-card {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .service-icon {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta-section {
+            padding: 100px 0;
+        }
+
+        .cta {
+            background: #111;
+            color: white;
+            border-radius: 12px;
+
+            padding: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .cta-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .cta h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .cta p {
+            color: #aaa;
+            margin: 0;
+        }
+
+        .cta-button {
+            background: white;
+            color: #111;
+
+            padding: 14px 25px;
+
+            border-radius: 5px;
+
+            white-space: nowrap;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #ddd;
+            color: #111;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #111;
+            color: white;
+
+            text-align: center;
+
+            padding: 50px 0;
+        }
+
+        footer h4 {
+            font-size: 16px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #888;
+            font-size: 13px;
+            margin: 0;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .about-hero {
+                min-height: 450px;
+            }
+
+            .about-hero h1 {
+                font-size: 42px;
+            }
+
+            .about-hero p {
+                font-size: 16px;
+            }
+
+            .intro,
+            .mission,
+            .why-us,
+            .services {
+                padding: 70px 0;
+            }
+
+            .intro h2,
+            .why-us h2,
+            .services-heading h2 {
+                font-size: 34px;
+            }
+
+            .intro-image {
+                height: 350px;
+                margin-top: 40px;
+            }
+
+            .why-image {
+                height: 400px;
+                margin-top: 40px;
+            }
+
+            .cta {
+                display: block;
+                padding: 40px 25px;
+            }
+
+            .cta-button {
+                display: inline-block;
+                margin-top: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg sticky-top">
+
+    <div class="container">
+
+        <a
+            class="navbar-brand"
+            href="index.html"
+        >
+            A ONE HOUSING
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarMenu"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarMenu"
+        >
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        Home
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="product.html"
+                    >
+                        Properties
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="about.html"
+                    >
+                        About
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html#contact"
+                    >
+                        Contact
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+
+                    <a
+                        class="nav-link nav-contact"
+                        href="index.html#contact"
+                    >
+                        Contact Us
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="about-hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                ABOUT A ONE HOUSING
+            </div>
+
+            <h1>
+                Building trust.<br>
+                Finding your place.
+            </h1>
+
+            <p>
+                We help people find homes, land and investment
+                opportunities that fit their needs, lifestyle
+                and future goals.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<section class="intro">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="section-label">
+                    WHO WE ARE
+                </div>
+
+                <h2>
+                    Your trusted partner
+                    in real estate.
+                </h2>
+
+                <p class="intro-text">
+                    A ONE HOUSING & REAL ESTATE is a
+                    customer-focused real estate company
+                    dedicated to making property buying,
+                    selling and renting simple and transparent.
+                </p>
+
+                <p class="intro-text">
+                    Whether you are searching for your first
+                    home, looking for the perfect piece of land,
+                    renting an apartment or making a property
+                    investment, our team is here to guide you
+                    throughout the process.
+                </p>
+
+                <p class="intro-text">
+                    We believe that real estate is more than
+                    buildings and land. It is about creating
+                    opportunities, building communities and
+                    helping people find a place they can call home.
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <img
+                    class="intro-image"
+                    src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85"
+                    alt="Modern Home"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3 col-6">
+
+                <div class="stat">
+
+                    <h3>100+</h3>
+
+                    <p>
+                        Properties Listed
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3 col-6">
+
+                <div class="stat">
+
+                    <h3>75+</h3>
+
+                    <p>
+                        Happy Clients
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3 col-6">
+
+                <div class="stat">
+
+                    <h3>5+</h3>
+
+                    <p>
+                        Years Experience
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3 col-6">
+
+                <div class="stat">
+
+                    <h3>10+</h3>
+
+                    <p>
+                        Locations Covered
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     MISSION & VISION
+========================= -->
+
+<section class="mission">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-6">
+
+                <div class="mission-card">
+
+                    <div class="mission-icon">
+
+                        <i class="bi bi-bullseye"></i>
+
+                    </div>
+
+                    <h3>
+                        Our Mission
+                    </h3>
+
+                    <p>
+                        Our mission is to provide reliable,
+                        transparent and professional real estate
+                        services while helping every client make
+                        confident property decisions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="mission-card">
+
+                    <div class="mission-icon">
+
+                        <i class="bi bi-eye"></i>
+
+                    </div>
+
+                    <h3>
+                        Our Vision
+                    </h3>
+
+                    <p>
+                        Our vision is to become a trusted name
+                        in Nepal's real estate industry by creating
+                        better property experiences and long-term
+                        relationships with our clients.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY US
+========================= -->
+
+<section class="why-us">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+
+            <div class="col-lg-6">
+
+                <div class="section-label">
+                    WHY CHOOSE US
+                </div>
+
+                <h2>
+                    Real estate made
+                    simpler.
+                </h2>
+
+                <p class="why-description">
+                    We focus on understanding what our clients
+                    actually need instead of simply showing
+                    properties. Our goal is to make every step
+                    clear and comfortable.
+                </p>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+
+                        <i class="bi bi-shield-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Trusted Service
+                        </h4>
+
+                        <p>
+                            We value honesty, transparency and
+                            long-term relationships.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+
+                        <i class="bi bi-house-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Quality Properties
+                        </h4>
+
+                        <p>
+                            We carefully select properties to
+                            provide better options for our clients.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+
+                        <i class="bi bi-people"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Client First
+                        </h4>
+
+                        <p>
+                            Your requirements and satisfaction
+                            are always our priority.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="benefit">
+
+                    <div class="benefit-icon">
+
+                        <i class="bi bi-headset"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Personal Support
+                        </h4>
+
+                        <p>
+                            Our team is available to guide you
+                            throughout your property journey.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <img
+                    class="why-image"
+                    src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85"
+                    alt="Beautiful Interior"
+                >
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services">
+
+    <div class="container">
+
+
+        <div class="services-heading">
+
+            <div class="section-label">
+                WHAT WE DO
+            </div>
+
+            <h2>
+                Our Real Estate Services
+            </h2>
+
+            <p>
+                From finding a property to completing your
+                transaction, we're here to help.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-house-door"></i>
+                    </div>
+
+                    <h3>
+                        Property Sales
+                    </h3>
+
+                    <p>
+                        Find residential and commercial
+                        properties that match your requirements
+                        and budget.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <h3>
+                        Property Rentals
+                    </h3>
+
+                    <p>
+                        Discover apartments, houses and other
+                        rental properties in convenient locations.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-map"></i>
+                    </div>
+
+                    <h3>
+                        Land & Plots
+                    </h3>
+
+                    <p>
+                        Explore residential land and plots with
+                        suitable locations and road access.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h3>
+                        Property Investment
+                    </h3>
+
+                    <p>
+                        Get guidance when looking for property
+                        investment opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-search"></i>
+                    </div>
+
+                    <h3>
+                        Property Search
+                    </h3>
+
+                    <p>
+                        Tell us what you're looking for and we'll
+                        help you find suitable options.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+                        <i class="bi bi-person-check"></i>
+                    </div>
+
+                    <h3>
+                        Client Support
+                    </h3>
+
+                    <p>
+                        Receive personal assistance throughout
+                        your property buying or renting journey.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta">
+
+            <div>
+
+                <div class="cta-label">
+                    LET'S WORK TOGETHER
+                </div>
+
+                <h2>
+                    Ready to find your next property?
+                </h2>
+
+                <p>
+                    Get in touch with our team today.
+                </p>
+
+            </div>
+
+
+            <a
+                href="index.html#contact"
+                class="cta-button"
+            >
+                Contact Us
+                <i class="bi bi-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <h4>
+            A ONE HOUSING & REAL ESTATE
+        </h4>
+
+        <p>
+            © 2026 A One Housing & Real Estate.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+</html>
